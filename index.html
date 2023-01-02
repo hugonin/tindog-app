@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Tindog App</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+        <div class="container-top-profile">
+            <img class="item-profile" src="/images/icon-profile.png" alt="profile icon">
+        </div>
+        <div class="container-top-logo">
+            <img class="item-logo" src="/images/logo.png" alt="logo of the app">
+        </div>
+        <div class="container-top-chat">
+            <img class="item-chat" src="/images/icon-chat.png" alt="chat icon">
+        </div>
+        <div class="main">
+            <div class="image-container">
+                <div class="badge">
+                    <img src="/images/badge-like.png">
+                </div>
+                <img class="main-image" src="/images/dog-bella.jpg" alt="">
+                <div class="content">
+                    <h3 class="content-title">Teddy, 30</h3>
+                    <p class="content-subtitle">How you doin?</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="reject-btn" class="reject-btn"><img class="image-btn" src="/images/reject-button.png"
+                alt="cross icon"></button>
+        <button id="heart-btn" class="heart-btn"><img class="image-btn" src="/images/heart-button.png"
+                alt="heart icon"></button>
+        <div class="container-bottom">
+            <p class="container-bottom-fineprint">&copy; <span id="year"> </span> | Made with <span aria-label="love"
+                    role="image">&#128150;</span> by <a href="https://github.com/hugonin">Hugonin</a>
+            </p>
+        </div>
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,8 +1,191 @@
-html {
-    box-sizing: border-box;
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(#ed4e63, #ffffff);
+}
+
+a {
+  text-decoration: none;
+  color: #8b8b8b;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
+h3 {
+  margin: 0;
+  color: #f8f8f8;
+  font-size: 1em;
+  line-height: 0.8;
+}
+
+.content-subtitle,
+.container-bottom-fineprint {
+  color: #b7b7b7;
+  font-size: 0.85em;
+}
+
+.container-bottom-fineprint {
+  opacity: 0.5;
+}
+
+/* ----- LAYOUT ----- */
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.container-top-profile,
+.container-top-chat,
+.container-top-logo {
+  width: 25%;
+  padding-top: 1em;
+}
+
+.reject-btn,
+.heart-btn {
+  border: none;
+  background: none;
+  width: 70%;
+  cursor: pointer;
+}
+
+.container-top-profile:hover,
+.container-top-chat:hover,
+.container-top-logo:hover,
+.image-btn:hover {
+  opacity: 0.8;
+}
+
+.reject-btn:active {
+  background: url("/images/reject-button-hover.png");
+}
+
+.heart-btn:active {
+  background: url("/images/heart-btn-hover.png");
+}
+
+.main {
+  grid-column: 2 / 6;
+}
+
+.container-top-profile {
+  grid-area: profile;
+}
+.container-top-logo {
+  grid-area: logo;
+}
+.container-top-chat {
+  grid-area: chat;
+}
+
+.image-container {
+  display: grid;
+}
+
+.badge {
+  /* display: none; */
+  grid-area: badge;
+  grid-column: 2 / span 3;
+  grid-row: 1 / 2;
+  width: 30%;
+  margin: 3em 0.75em;
+  transform: rotate(-30deg);
+}
+.content {
+  /* display: none; */
+  grid-area: content;
+  grid-row: 3 / 4;
+  margin: 1em;
+}
+
+.main-image {
+  grid-column: 2 / 8;
+  grid-row: 1 / 4;
+  margin: 1em auto;
+  border-radius: 20px;
+  height: 500px;
+}
+
+.reject-btn {
+  grid-area: reject;
+}
+
+.heart-btn {
+  grid-area: like;
+}
+
+.container-bottom {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 10% 20% 20% 20% 20% 10%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    " . profile logo logo chat . "
+    " . image image image image . "
+    " . . reject like . . "
+    " . footer footer footer footer . ";
+  justify-items: center;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (min-width: 600px) {
+  .badge {
+    width: 25%;
+  }
+
+  .content {
+    font-size: 1.25em;
+  }
+
+  .reject-btn,
+  .heart-btn {
+    width: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-top-profile,
+  .container-top-chat,
+  .container-top-logo {
+    width: 12.5%;
+  }
+
+  .content {
+    font-size: 1.5em;
+  }
+
+  .reject-btn,
+  .heart-btn {
+    width: 50%;
+  }
+
+  .badge,
+  .content {
+    grid-column: 3 / 4;
+  }
+
+  .badge {
+    width: 20%;
+  }
+
+  .main-image {
+    height: 460px;
+  }
 }
